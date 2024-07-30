@@ -6,13 +6,11 @@ This is a basic profile web application built with Node.js, Express.js, MongoDB,
 
 <ul>
   <li><a href="#features">Features</a></li>
-  <li><a href="#tech-stack">Tech Stack</a></li>
+  <li><a href="#prerequisites">Tech Stack</a></li>
   <li><a href="#installation">Installation</a></li>
-  <li><a href="#usage">Usage</a></li>
-  <li><a href="#configuration">Configuration</a></li>
-  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#usage">Configuration</a></li>
+  <li><a href="#Middleware">Contributing</a></li>
   <li><a href="#license">License</a></li>
-  <li><a href="#contact">Contact</a></li>
 </ul>
 
 ## Features
@@ -39,8 +37,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/edusity.git
-    cd edusity
+    git clone https://github.com/amantiwarix/Basic_profile_web.git
+    cd Basic_profile_web
     ```
 
 2. **Install dependencies:**
@@ -48,16 +46,16 @@ Before you begin, ensure you have met the following requirements:
     npm install
     ```
 
-3. **Create a `.env` file:**
-    Create a `.env` file in the root directory and add your environment variables. Example:
-    ```plaintext
-    VITE_API_URL=http://localhost:5000/api
-    VITE_AUTH_TOKEN=your_auth_token
+3. **Install Nodemon:**
+    ```bash
+    npm i nodemon
     ```
 
 4. **Start the development server:**
     ```bash
-    npm run dev
+    nodemon app.js
+    or
+    npx nodemon app.js
     ```
 
     The application will be available at `http://localhost:3000`.
@@ -67,56 +65,28 @@ Before you begin, ensure you have met the following requirements:
 ### Running the Application
 
 <ul>
-  <li><strong>Development:</strong>
-    <ul>
-      <li>Run `npm run dev` to start the development server.</li>
-      <li>Open `http://localhost:3000` in your browser.</li>
-    </ul>
-  </li>
-
-  <li><strong>Building for Production:</strong>
-    <ul>
-      <li>Run `npm run build` to build the application for production.</li>
-      <li>The output will be in the `dist` directory. Serve it with a static server or deploy it to a hosting provider.</li>
-    </ul>
-  </li>
+  <li><strong>Start the MongoDB server</strong> id it's not already running.</li>
+  <li><strong>Start the application</strong>
+  ```bash
+    nodemon app.js
+    or
+    npx nodemon app.js
+    ```</li>
+  <li><strong>Open your browser</strong>nd navigate to `http://localhost:3000`.</li>
 </ul>
 
-### User Roles
+## Middleware
 
 <ul>
-  <li><strong>Students:</strong> Can enroll in courses, view grades, and access personal profiles.</li>
-  <li><strong>Educators:</strong> Can manage courses, create and grade quizzes, and track student progress.</li>
-  <li><strong>Admin:</strong> Can manage users, courses, and oversee the entire system.</li>
+  <li><strong>`cookie-parser`</strong> - To parse cookies</li>
+  <li><strong>`jsonwebtoken`</strong> - To handle JWT</li>
+  <li><strong>`mongoose`</strong> - To interact with MongoDB</li>
+  <li><strong>`express`</strong> - To create the server</li>
 </ul>
 
-## Configuration
-
-Ensure you have the necessary environment variables set up in the `.env` file for the frontend. Refer to the `.env.example` file for guidance.
-
-## Contributing
-
-We welcome contributions! Follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature`).
-6. Open a pull request.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
-
-If you have any questions or suggestions, feel free to reach out to us:
-
-<ul>
-  <li><strong>Email:</strong> support@edusity.com</li>
-  <li><strong>GitHub Issues:</strong> <a href="https://github.com/yourusername/edusity/issues">Issues Page</a></li>
-</ul>
 ---
-
-Feel free to adjust this template according to the specific details and requirements of your Edusity application built with ReactJS and Vite.
